@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    /* -border: 1px solid blue; */
+}
+
+:root {
+    font-family: 'Roboto', sans-serif;
+    --void: #0e0b16;
+    --fuschia: #a239ca;
+    --jewel: #4717f6;
+    --stark: #e7dfdd;
+
+}
+
+main {
+    /* background-color: var(--void); */
+    background-image: url("imgs/matrix_gif.gif");
+    background-repeat: no-repeat;
+    background-size: 115%;
+    color: var(--stark);
+}
+
+footer {
+    text-align: center;
+    background-color: var(--stark);
+    width: 100%;
+}
+
+footer img {
+    color: var(--void);
+    padding: 1rem;
+    transition: ease-in-out 0.3s;
+}
+
+footer img:hover {
+    background-color: var(--fuschia);
+}
+
+a {
+    text-decoration: none;
+    color: var(--stark);
+    transition: ease-in-out 0.3s;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--void);
+}
+
+nav {
+    display: flex;
+    background-color: var(--jewel);
+    color: var(--stark);
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+p#different-hellos {
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem;
+    transition: ease-in-out 0.3s;
+}
+
+p#different-hellos:hover {
+    color:#a239ca;
+}
+
+main > section {
+    text-align: center;
+}
+
+h1 {
+    padding: 2rem;
+    font-size: 3rem;
+}
+
+img {
+    padding: 2rem;
+}
+
+main > section > p {
+    padding: 1rem;
+    font-size: 2rem;
+    /* background-color: var(--void); */
+}
+
+h1 {
+    text-decoration: none;
+    transition: ease-in-out 0.3s;
+}
+
+h1:hover {
+    color: var(--stark);
+    transform: scale(1.5);
+}
+
+img#aadhar-pic:hover {
+    animation: shake 0.8s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+  
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-5px, 0, 0);
+    }
+
+    20%, 80% {
+        transform: translate3d(8px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-12px, 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(10px, 0, 0);
+    }
+}
+
+@media only screen and (max-width:600px) {
+    nav a {
+        display: block;
+        padding: 0.5rem;
+    }
+
+    nav {
+        display: block;
+    }
+
+    main {
+        /* background-color: var(--void); */
+        background-image: url("imgs/matrix_gif.gif");
+        background-repeat: repeat;
+        background-size: 115%;
+        color: var(--stark);
+    }
+    
+}

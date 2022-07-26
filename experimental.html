@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPERIMENTAL</title>
+    <link rel="stylesheet" href="empty.css"/> 
+    <style>
+        * {
+            border: 1px dotted blue;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        This is the header tag
+        <nav>
+            <a href="/index.html">HOME</a> |
+            <a href="/aboutme.html">ABOUT ME</a> |
+            <a href="/experience.html">EXPERIENCE</a> |
+            <a href="/projects.html">PROJECTS</a> |
+            <a href="/experimental.html">EXPERIMENTAL</a>
+        </nav>
+        <hr/>
+    </header>
+    <main>
+        <h1>h1 tag</h1>
+        <h2>h2 tag</h2>
+        <h3>h3 tag</h3>
+        <p> This is the p tag. Some paragraph is here. </p>
+        <aside> This is the aside tag, something aside from the paragraph above goes here. </aside>
+        <hr/>
+        <div> This is the div tag. </div> Continuing after div tag.
+        <span> This is the span tag. </span> Continuing after span tag.
+        <p><b> Everything here is bold. </b></p>
+        <p><i> Everything here is italicized. </i></p>
+        <p><strong> Everything here is strong. </strong></p>
+        <p><em> Everything here is em. </em></p>
+        <p>This is the <code>code</code> tag</p>
+
+        <hr/>
+
+        <h2> Pre tag </h2>
+        <pre>
+            The pre        tag
+            is     b  e  i  n  g
+            us
+                    ed
+        </pre>
+
+        <hr/>
+
+        <h2> Picture tag </h2>
+        <picture>
+            <source media="(min-width:950px)" srcset="imgs/usa.png" width="200" height="100">
+            <source media="(min-width:665px)" srcset="imgs/india.png" width="200" height="100">
+            <img src="imgs/china.png" alt="pic" style="width:auto;" width="200" height="100">
+        </picture>
+
+        <hr/>
+
+        <h2> iframe tag </h2>
+
+        <iframe 
+            src="index.html" title="homepage">
+        </iframe>
+        
+        <hr/>
+
+        <h2> audio tag </h2>
+
+        <audio controls>
+            <source src="experimental/dogbarking.mp3" type="audio/mpeg">
+        </audio>
+
+        <hr/>
+
+        <h2> video tag</h2>
+        
+        <video controls>
+            <source src="experimental/five_sec_clip.mp4" type="video/mp4">
+        </video>
+        
+
+        <hr/>
+
+        <h2> canvas tag </h2>
+            <canvas id="canv"></canvas>
+
+            <script>
+                var theCanvas = document.getElementById("canv");
+                var context = theCanvas.getContext("2d");
+                context.fillRect(0, 0, 150, 90);
+            </script>
+
+        <hr/>
+
+        <h2> svg tag </h2>
+
+        <svg width="150" height="150">
+            <circle cx="70" cy="70" r="20" stroke="red"/>
+        </svg>
+
+        <hr/>
+
+        <h2> ul tag</h2>
+
+        <ul>
+            <li> item 1 </li>
+            <li> item 2 </li>
+            <li> item 3 </li>
+        </ul>
+
+        <hr/>
+
+        <h2> ol tag </h2> 
+        
+        <ol>
+            <li> item 1 </li>
+            <li> item 2 </li>
+            <li> itme 3</li>
+        </ol>
+
+        <hr/>
+
+        <h2> optgroup tag, select tag, and option tag</h2>
+
+        <form>
+            <label for="foods">Choose food:</label>
+            <select name="foods" id="foods">
+                <optgroup label="junk food">
+                    <option value="fries">fries</option>
+                    <option value="chips">chips</option>
+                </optgroup>
+                <optgroup label="healthy food">
+                    <option value="broccoli">broccoli</option>
+                    <option value="banana">banana</option>
+                </optgroup>
+            </select>
+        </form>
+
+        <hr/>
+
+        <h2> label tag and input tag </h2>
+
+        <form>
+            <input type="radio" id="apple" name="fav_fruit" value="apple">
+            <label for="apple">apple</label><br>
+            <input type="radio" id="banana" name="fav_fruit" value="banana">
+            <label for="banana">banana</label><br>
+            <input type="radio" id="orange" name="fav_fruit" value="orange">
+            <label for="orange">orange</label><br>
+        </form>
+
+        <hr/>
+
+        <h2> fieldset tag, form tag, and legend tag </h2>
+
+        <form>
+            <fieldset>
+                <legend>Personal Info</legend>
+                <label for="ssn">SSN:</label>
+                <input type="text" id="ssn" name="ssn"><br><br>
+                <label for="bankacc">Bank account:</label>
+                <input type="text" id="bankacc" name="bankacc"><br><br>
+            </fieldset>
+        </form>
+
+        <hr/>
+
+        <h2> textarea tag </h2>
+
+        <form>
+            <textarea rows="4" cols="45">
+                This is a textarea. This is a textarea. This is a textarea. This is a textarea. This is a textarea. This is a textarea.
+                This is a textarea. This is a textarea. This is a textarea. This is a textarea. This is a textarea. This is a textarea.
+                This is a textarea. This is a textarea. This is a textarea. This is a textarea. This is a textarea. This is a textarea.
+                This is a textarea. This is a textarea. This is a textarea. This is a textarea. This is a textarea. This is a textarea.
+            </textarea>
+            <br>
+        </form>
+
+        <hr/>
+
+        <h2> details tag and summary tag </h2>
+        <details>
+            <summary>
+                This is the summary
+            </summary>
+            <p> These are the specific details. </p>
+        </details>
+        <hr/>
+
+        <h2> button tag </h2>
+        <button> Do Nothing </button>
+
+        <hr/>
+
+        <h2> Template tag</h2>
+            <p> The stuff below is hidden </p>
+            <template>
+                <h2>HEADING</h2>
+            </template>
+
+        <hr/>
+
+        <h2> table, tr, td, th, caption, col, colgroup tags</h2>
+            <table>
+                <caption> Random Table</caption>
+                <colgroup> 
+                    <col span="2"/>  
+                </colgroup>
+                <tr> 
+                    <th>
+                        Professor
+                    </th>
+                    <th>
+                        Class
+                    </th>
+                </tr>
+                <tr>
+                    <td> prof1 </td>
+                    <td> CSE 101 </td>
+                </tr>
+                <tr>
+                    <td> prof2 </td>
+                    <td> CSE 110 </td>
+                </tr>
+            </table>
+        <hr/>
+
+        <h2> figure, figcaption tags </h2>
+        
+        <figure>
+            <img src="imgs/usa.png" width="200" height="100"/>
+            <figcaption> usa flag </figcaption>
+        </figure>
+        
+        <hr/>
+
+        <h2> datalist tag </h2>
+
+        <form>
+            <label>Choose your fav fruit from the list:</label>
+            <input list="fruits">
+            <datalist id="fruits">
+              <option value="apple">
+              <option value="banana">
+              <option value="orange">
+              <option value="mango">
+              <option value="grapes">
+            </datalist>
+          </form>
+
+        <hr/>
+ 
+    </main>
+
+    <hr/>
+    <footer> This is the footer tag </footer>
+    <hr/>
+</body>
+</html>
