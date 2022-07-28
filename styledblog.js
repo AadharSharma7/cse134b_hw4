@@ -12,6 +12,10 @@ function makePostSection() {
 
     postsArr = JSON.parse(localStorage.getItem('posts'));
 
+    if(postsArr == null) {
+        postsArr = [];
+    }
+
     for(let i = 0; i < postsArr.length; i++) {
         let post = postsArr[i];
 
