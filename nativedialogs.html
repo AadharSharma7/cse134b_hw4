@@ -26,21 +26,23 @@
         <hr/>
     </header>
 
-    <main>
+    <main style="padding:2rem;">
         <h1> Simple Dialogs </h1>
-        <button id="alertBtn" type="button"> Alert </button>
         <br/>
         <br/>
-        <button id="confirmBtn" type="button"> Confirm </button>
+        <button id="alert-btn" type="button"> Alert </button>
         <br/>
         <br/>
-        <button id="promptBtn" type="button"> Prompt </button>
+        <button id="confirm-btn" type="button"> Confirm </button>
         <br/>
         <br/>
-        <button id="saferPrompt" type="button"> Safer Prompt </button>
+        <button id="prompt-btn" type="button"> Prompt </button>
         <br/>
         <br/>
-        <output id="outputTag"> </output>
+        <button id="safer-prompt" type="button"> Safer Prompt </button>
+        <br/>
+        <br/>
+        <output id="output-tag"> </output>
     </main>
 
     <footer>
@@ -64,47 +66,47 @@
     document.addEventListener('DOMContentLoaded', () => {
 
         // alert button event
-        document.getElementById('alertBtn').addEventListener('click', () => {
+        document.getElementById('alert-btn').addEventListener('click', () => {
             alert('This is an alert!');
         });
 
         // confirm button event
-        document.getElementById('confirmBtn').addEventListener('click', () => {
+        document.getElementById('confirm-btn').addEventListener('click', () => {
             let clicked = confirm('Click one of the buttons');
 
             console.log(`Value of clicked is : ${clicked}`);
 
             if(clicked) {
-                document.getElementById('outputTag').innerHTML = 'The value returned by the confirm method is : true';
+                document.getElementById('output-tag').innerHTML = 'The value returned by the confirm method is : true';
             }
             else {
-                document.getElementById('outputTag').innerHTML = 'The value returned by the confirm method is : false';
+                document.getElementById('output-tag').innerHTML = 'The value returned by the confirm method is : false';
             }  
         });
 
         // prompt button event
-        document.getElementById('promptBtn').addEventListener('click', () => {
+        document.getElementById('prompt-btn').addEventListener('click', () => {
             let userInput = prompt('Enter name: ');
 
             if(userInput == null || userInput == '') {
-                document.getElementById('outputTag').innerHTML = 'User did not enter anything'; 
+                document.getElementById('output-tag').innerHTML = 'User did not enter anything'; 
             }
             else {
-                document.getElementById('outputTag').innerHTML = 'User entered : ' + userInput; 
+                document.getElementById('output-tag').innerHTML = 'User entered : ' + userInput; 
             }
         });
 
         // safer prompt button event
-        document.getElementById('saferPrompt').addEventListener('click', () => { 
+        document.getElementById('safer-prompt').addEventListener('click', () => { 
             let userInput = prompt('Enter name: ');
 
             let cleanUserInput = DOMPurify.sanitize(userInput); // clean user input
 
             if(cleanUserInput == null || cleanUserInput == '') {
-                document.getElementById('outputTag').innerHTML = 'User did not enter anything'; 
+                document.getElementById('output-tag').innerHTML = 'User did not enter anything'; 
             }
             else {
-                document.getElementById('outputTag').innerHTML = 'User entered : ' + cleanUserInput; 
+                document.getElementById('output-tag').innerHTML = 'User entered : ' + cleanUserInput; 
             }
         });
     });
