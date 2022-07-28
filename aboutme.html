@@ -7,16 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" media="screen" href="aboutme.css" type="text/css" />
     <link rel="icon" href="imgs/aboutme_favicon.png" />
+
+    <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css" />
+
     <title>ABOUT ME</title>
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="/index.html">HOME</a>
-            <a href="/aboutme.html">ABOUT ME</a>
-            <a href="/experience.html">EXPERIENCE</a>
-            <a href="/projects.html">PROJECTS</a>
+            <a href="/index.html" title="home page">HOME</a>
+            <a href="/aboutme.html" title="about me">ABOUT ME</a>
+            <a href="/experience.html" title="experience">EXPERIENCE</a>
+            <a href="/projects.html" title="projects">PROJECTS</a>
+            <a href="/nativedialogs.html" title="native dialogs">NATIVE DIALOGS</a> 
+            <a href="/customdialogs.html" title="native dialogs">CUSTOM DIALOGS</a> 
+            <a href="/crud.html" title="simple crud">SIMPLE CRUD</a>
+            <a href="/styledcrud.html" title="styled crud">STYLED CRUD</a>  
         </nav>
         <hr/>
     </header>
@@ -24,8 +31,8 @@
     <main>
         <section class="who-am-i">
             
-            <h1> Who am I?</h1>
-            <p> My name is Aadhar Sharma, I am a senior at UCSD majoring in Computer Engineering. 
+            <h1 data-anijs="if: show, do: zoomInDown animated"> Who am I?</h1>
+            <p data-anijs="if: show, do: zoomInDown animated"> My name is Aadhar Sharma, I am a senior at UCSD majoring in Computer Engineering. 
                 I live in Fremont, California with my parents and younger brother. 
                 An interesting fact about me is that I have had plently of international exposure as a child. 
                 My dad moved a lot throughout my childhood due to work, and he took the family along.
@@ -41,11 +48,11 @@
             </p>
             
             <div>
-                <img class="flags" src="imgs/india.png" alt="India flag" title="India flag" width="400" height="300" />
-                <img class="flags" src="imgs/malaysia.png" alt="Malaysia flag" title="Malaysia flag" width="400" height="300" />
-                <img src="imgs/aadhar2.png" alt="aadhar img" title="This is me!" width="400" height="500" />
-                <img class="flags" src="imgs/china.png" alt="China flag" title="China flag" width="400" height="300" />
-                <img class="flags" src="imgs/usa.png" alt="USA flag" width="400" height="300" />
+                <img data-anijs="if: load, do: slideInLeft animated" class="flags" src="imgs/india.png" alt="India flag" title="India flag" width="400" height="300" />
+                <img data-anijs="if: load, do: slideInLeft animated" class="flags" src="imgs/malaysia.png" alt="Malaysia flag" title="Malaysia flag" width="400" height="300" />
+                <img data-anijs="if: load, do: zoomInDown animated" src="imgs/aadhar2.png" alt="aadhar img" title="This is me!" width="400" height="500" />
+                <img data-anijs="if: load, do: slideInRight animated" class="flags" src="imgs/china.png" alt="China flag" title="China flag" width="400" height="300" />
+                <img data-anijs="if: load, do: slideInRight animated" class="flags" src="imgs/usa.png" alt="USA flag" width="400" height="300" />
             </div>
         </section>
 
@@ -136,5 +143,8 @@
             </a>
         </my-icons>
     </footer>
+
+    <script src="https://anijs.github.io/lib/anijs/anijs-min.js"></script> 
+
 </body>
 </html>

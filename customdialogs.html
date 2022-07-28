@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" media="screen" href="commonstyle.css" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.10/purify.min.js"></script>
+    <script type="module" src="./customdialog.js"></script>
+
+    <title> Custom Dialogs </title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="/index.html" title="home page">HOME</a>
+            <a href="/aboutme.html" title="about me">ABOUT ME</a>
+            <a href="/experience.html" title="experience">EXPERIENCE</a>
+            <a href="/projects.html" title="projects">PROJECTS</a>
+            <a href="/nativedialogs.html" title="native dialogs">NATIVE DIALOGS</a> 
+            <a href="/customdialogs.html" title="native dialogs">CUSTOM DIALOGS</a> 
+            <a href="/crud.html" title="simple crud">SIMPLE CRUD</a>
+            <a href="/styledcrud.html" title="styled crud">STYLED CRUD</a>  
+        </nav>
+        <hr/>
+    </header>
+
+    <main style="padding:2rem;">
+        <h1> Custom Dialogs </h1>
+        <br/>
+        <br/>
+        <button id="alert-btn" type="button"> Alert </button>
+        <br/>
+        <br/>
+        <button id="confirm-btn" type="button"> Confirm </button>
+        <br/>
+        <br/>
+        <button id="prompt-btn" type="button"> Prompt </button>
+        <br/>
+        <br/>
+        <output id="output-tag"> </output>
+        <br/>
+        <br/>
+
+        <dialog id="alert-dialog" style="display: none; background-color: crimson; position: fixed; top:30%; left:45%; padding:1rem;" open>
+            <h2> This is an alert! </h2>
+            <button id="alert-ok-btn" type="button" onclick="alert-ok-btn()"> OK </button>
+        </dialog>
+
+        <dialog id="confirm-dialog" style="display: none; background-color: crimson; position: fixed; top:30%; left:45%; padding:1rem;" open>
+            <h2> Confirm yes or no </h2>
+            <button id="confirm-ok-btn" type="button"> OK </button>
+            <button id="confirm-cancel-btn" type="button"> Cancel </button>
+        </dialog>
+
+        <dialog id="prompt-dialog" style="display: none; background-color: crimson; position: fixed; top:30%; left:45%; padding:1rem;" open>
+            <h2 id="the-prompt"> Enter Name: </h2>
+            <input type="text" id="name-input" />
+            <button id="prompt-ok-btn" type="button" onclick="prompt-ok-btn()"> OK </button>
+            <button id="prompt-cancel-btn" type="button" onclick="prompt-cancel-btn()"> Cancel </button>
+        </dialog>
+    </main>
+
+    <footer>
+        <my-icons>
+            <a href="https://github.com/AadharSharma7" target="_blank" title="Go to Github">
+                <img src="imgs/github_icon.png" alt="Link to Github" title="GitHub" width="35">
+            </a>
+            <a href="#" title="Go to Email">
+                <img src="imgs/email_icon.png" alt="Link to Email" title="Email" width="35">
+            </a>
+            <a href="https://www.linkedin.com/in/aadhar-sharma-4089b519b/" target="_blank" title="Go to LinkedIn">
+                <img src="imgs/linkedin_icon.png" alt="Link to LinkedIn" title="LinkedIn" width="35">
+            </a>
+        </my-icons>
+    </footer>
+
+</body>
+
+</html>

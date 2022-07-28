@@ -6,19 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" media="screen" href="experience.css" type="text/css" />
     <link rel="icon" href="imgs/experience_favicon.png" />
+
+    <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css" />
+
     <title>EXPERIENCE</title>
 
 </head>
+
 <body>
+
     <header>
         <nav>
-            <a href="/index.html">HOME</a>
-            <a href="/aboutme.html">ABOUT ME</a>
-            <a href="/experience.html">EXPERIENCE</a>
-            <a href="/projects.html">PROJECTS</a>
+            <a href="/index.html" title="home page">HOME</a>
+            <a href="/aboutme.html" title="about me">ABOUT ME</a>
+            <a href="/experience.html" title="experience">EXPERIENCE</a>
+            <a href="/projects.html" title="projects">PROJECTS</a>
+            <a href="/nativedialogs.html" title="native dialogs">NATIVE DIALOGS</a> 
+            <a href="/customdialogs.html" title="native dialogs">CUSTOM DIALOGS</a> 
+            <a href="/crud.html" title="simple crud">SIMPLE CRUD</a>
+            <a href="/styledcrud.html" title="styled crud">STYLED CRUD</a>  
         </nav>
         <hr/>
     </header>
+
     <main>
         <h1> Industry Experience </h1>
         <section>
@@ -39,9 +49,9 @@
                 At the end of the internship, I had to build a powerpoint and present my project to the Design Verification Team.
             </p>
             <div>
-                <img src="imgs/dt_insight1.png" alt="dt_insight1 img" title="dt_insight1" width="600" height="600">
-                <img src="imgs/dt_insight2.png" alt="dt_insight2 img" title="dt_insight1" width="600" height="600">
-                <img src="imgs/dt_insight3.png" alt="dt_insight3 img" title="dt_insight1" width="600" height="600">
+                <img data-anijs="if: load, do: slideInLeft animated" src="imgs/dt_insight1.png" alt="dt_insight1 img" title="dt_insight1" width="600" height="600">
+                <img data-anijs="if: load, do: slideInUp animated" src="imgs/dt_insight2.png" alt="dt_insight2 img" title="dt_insight2" width="600" height="600">
+                <img data-anijs="if: load, do: slideInRight animated" src="imgs/dt_insight3.png" alt="dt_insight3 img" title="dt_insight3" width="600" height="600">
             </div>
         </section>
     </main>
@@ -59,5 +69,9 @@
             </a>
         </my-icons>
     </footer>
+
+    <script src="https://anijs.github.io/lib/anijs/anijs-min.js"></script> 
+
 </body>
+
 </html>

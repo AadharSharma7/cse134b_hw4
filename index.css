@@ -126,7 +126,7 @@ img#aadhar-pic:hover {
     }
 }
 
-@media only screen and (max-width:600px) {
+@media only screen and (max-width:950px) {
     nav a {
         display: block;
         padding: 0.5rem;
@@ -142,6 +142,5 @@ img#aadhar-pic:hover {
         background-repeat: repeat;
         background-size: 115%;
         color: var(--stark);
-    }
-    
+    }  
 }

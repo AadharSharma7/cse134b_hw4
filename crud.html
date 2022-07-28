@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen" href="commonstyle.css" type="text/css" />
+    <script type="module" src="./blog.js"></script>
+
+    <title> Crud </title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="/index.html" title="home page">HOME</a>
+            <a href="/aboutme.html" title="about me">ABOUT ME</a>
+            <a href="/experience.html" title="experience">EXPERIENCE</a>
+            <a href="/projects.html" title="projects">PROJECTS</a>
+            <a href="/nativedialogs.html" title="native dialogs">NATIVE DIALOGS</a> 
+            <a href="/customdialogs.html" title="native dialogs">CUSTOM DIALOGS</a> 
+            <a href="/crud.html" title="simple crud">SIMPLE CRUD</a>
+            <a href="/styledcrud.html" title="styled crud">STYLED CRUD</a>  
+        </nav>
+        <hr/>
+    </header>
+
+    <main>
+
+        <dialog id="post-form-dialog">
+            <form id="post-form" method="get">
+                <label for="post-title">Title</label>
+                <input type="text" name="post-title" id="post-title" maxlength="40" required> 
+                <br/>
+                <br/>
+
+                <label for="post-date">Date</label>
+                <input type="date" name="post-date" id="post-date" required>
+                <br/>
+                <br/>
+
+                <label for="post-summary">Summary</label>
+                <br/>
+
+                <textarea name="post-summary" id="post-summary" cols="20" rows="10" style="resize: none;"></textarea>
+                <br/>
+                <br/>
+            </form>
+
+            <button id="cancel-post-btn" type="button">Cancel</button>
+            <button id="submit-post-btn" type="submit" form="post-form">Submit</button>
+        </dialog>
+
+        <dialog id="single-post-dialog">
+            <h2 name="singlepost-title" id="singlepost-title"></h2>
+            
+            <h4 name="singlepost-date" id="singlepost-date"></h4>
+
+            <textarea name="singlepost-summary" id="singlepost-summary" cols="20" rows="10" style="resize: none;" readonly></textarea>
+            <br/>
+            <br/> 
+            <button id="singlepost-closebtn"> Close </button>
+        </dialog>
+
+        <h1>Current Posts</h1> 
+        <div id="all-posts"></div>
+        <br/>
+        <button id="add-postbtn">Add Post</button>
+        
+
+    </main>
+
+    <footer>
+        <my-icons>
+            <a href="https://github.com/AadharSharma7" target="_blank" title="Go to Github">
+                <img src="imgs/github_icon.png" alt="Link to Github" title="GitHub" width="35">
+            </a>
+            <a href="#" title="Go to Email">
+                <img src="imgs/email_icon.png" alt="Link to Email" title="Email" width="35">
+            </a>
+            <a href="https://www.linkedin.com/in/aadhar-sharma-4089b519b/" target="_blank" title="Go to LinkedIn">
+                <img src="imgs/linkedin_icon.png" alt="Link to LinkedIn" title="LinkedIn" width="35">
+            </a>
+        </my-icons>
+    </footer>
+    
+</body>
+
+</html>

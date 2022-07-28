@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" media="screen" href="commonstyle.css" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.10/purify.min.js"></script>
+
+    <title> Simple Dialogs </title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/index.html" title="home page">HOME</a>
+            <a href="/aboutme.html" title="about me">ABOUT ME</a>
+            <a href="/experience.html" title="experience">EXPERIENCE</a>
+            <a href="/projects.html" title="projects">PROJECTS</a>
+            <a href="/nativedialogs.html" title="native dialogs">NATIVE DIALOGS</a> 
+            <a href="/customdialogs.html" title="native dialogs">CUSTOM DIALOGS</a> 
+            <a href="/crud.html" title="simple crud">SIMPLE CRUD</a>
+            <a href="/styledcrud.html" title="styled crud">STYLED CRUD</a>  
+        </nav>
+        <hr/>
+    </header>
+
+    <main>
+        <h1> Simple Dialogs </h1>
+        <button id="alertBtn" type="button"> Alert </button>
+        <br/>
+        <br/>
+        <button id="confirmBtn" type="button"> Confirm </button>
+        <br/>
+        <br/>
+        <button id="promptBtn" type="button"> Prompt </button>
+        <br/>
+        <br/>
+        <button id="saferPrompt" type="button"> Safer Prompt </button>
+        <br/>
+        <br/>
+        <output id="outputTag"> </output>
+    </main>
+
+    <footer>
+        <my-icons>
+            <a href="https://github.com/AadharSharma7" target="_blank" title="Go to Github">
+                <img src="imgs/github_icon.png" alt="Link to Github" title="GitHub" width="35">
+            </a>
+            <a href="#" title="Go to Email">
+                <img src="imgs/email_icon.png" alt="Link to Email" title="Email" width="35">
+            </a>
+            <a href="https://www.linkedin.com/in/aadhar-sharma-4089b519b/" target="_blank" title="Go to LinkedIn">
+                <img src="imgs/linkedin_icon.png" alt="Link to LinkedIn" title="LinkedIn" width="35">
+            </a>
+        </my-icons>
+    </footer>
+
+</body>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // alert button event
+        document.getElementById('alertBtn').addEventListener('click', () => {
+            alert('This is an alert!');
+        });
+
+        // confirm button event
+        document.getElementById('confirmBtn').addEventListener('click', () => {
+            let clicked = confirm('Click one of the buttons');
+
+            console.log(`Value of clicked is : ${clicked}`);
+
+            if(clicked) {
+                document.getElementById('outputTag').innerHTML = 'The value returned by the confirm method is : true';
+            }
+            else {
+                document.getElementById('outputTag').innerHTML = 'The value returned by the confirm method is : false';
+            }  
+        });
+
+        // prompt button event
+        document.getElementById('promptBtn').addEventListener('click', () => {
+            let userInput = prompt('Enter name: ');
+
+            if(userInput == null || userInput == '') {
+                document.getElementById('outputTag').innerHTML = 'User did not enter anything'; 
+            }
+            else {
+                document.getElementById('outputTag').innerHTML = 'User entered : ' + userInput; 
+            }
+        });
+
+        // safer prompt button event
+        document.getElementById('saferPrompt').addEventListener('click', () => { 
+            let userInput = prompt('Enter name: ');
+
+            let cleanUserInput = DOMPurify.sanitize(userInput); // clean user input
+
+            if(cleanUserInput == null || cleanUserInput == '') {
+                document.getElementById('outputTag').innerHTML = 'User did not enter anything'; 
+            }
+            else {
+                document.getElementById('outputTag').innerHTML = 'User entered : ' + cleanUserInput; 
+            }
+        });
+    });
+
+</script>
+
+</html>

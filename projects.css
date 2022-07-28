@@ -60,10 +60,10 @@ nav {
 
 h1 {
     text-align: center;
-    padding: 4rem 0 2rem 2rem;
+    padding-top: 4rem;
 }
 
-h2 {
+section h2 {
     text-align: center;
     padding: 5rem 1rem 1rem 1rem;
 }
@@ -87,6 +87,27 @@ section.projects1 {
     grid-template: repeat(1,1fr) / repeat(2,1fr);
 }
 
+dialog {
+    display: none; 
+    width:70%; 
+    text-align:center; 
+    margin:0 auto; 
+    z-index:20; 
+    position: fixed; 
+    left:0%; 
+    top:25%;
+}
+
+section.future-plans {
+    width:40%; 
+    margin:0 auto;
+}
+
+p#alert-paragraph {
+    text-align:justify; 
+    padding:1rem;
+}
+
 main img {
     display: flex;
     justify-content: center;
@@ -107,6 +128,11 @@ main img {
 
 main img:hover {
     filter: brightness(30%);
+}
+
+dialog {
+    justify-content: center;
+    justify-self: center;
 }
 
 img[src="imgs/nn.jpeg"] {
@@ -133,6 +159,10 @@ img[src="imgs/nn.jpeg"] {
         width: 100%;
         justify-self: center;
         align-items: center;
+    }
+
+    dialog {
+        top: 0%;
     }
 
     main img {
@@ -196,5 +226,10 @@ img[src="imgs/nn.jpeg"] {
         text-align: justify;
         margin-left: 1rem;
         margin-right: 1rem;
+    }
+
+    section.future-plans {
+        width:70%; 
+        margin:0 auto;
     }
 }

@@ -6,16 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" media="screen" href="projects.css" type="text/css" />
     <link rel="icon" href="imgs/projects_favicon.png" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <title>PROJECTS</title>
 </head>
 
 <body>
+
     <header>
         <nav>
-            <a href="/index.html">HOME</a>
-            <a href="/aboutme.html">ABOUT ME</a>
-            <a href="/experience.html">EXPERIENCE</a>
-            <a href="/projects.html">PROJECTS</a>
+            <a href="/index.html" title="home page">HOME</a>
+            <a href="/aboutme.html" title="about me">ABOUT ME</a>
+            <a href="/experience.html" title="experience">EXPERIENCE</a>
+            <a href="/projects.html" title="projects">PROJECTS</a>
+            <a href="/nativedialogs.html" title="native dialogs">NATIVE DIALOGS</a> 
+            <a href="/customdialogs.html" title="native dialogs">CUSTOM DIALOGS</a> 
+            <a href="/crud.html" title="simple crud">SIMPLE CRUD</a>
+            <a href="/styledcrud.html" title="styled crud">STYLED CRUD</a>  
         </nav>
         <hr/>
     </header>
@@ -23,65 +30,82 @@
     <main>
         <h1>PROJECTS</h1>
 
+        <ul style="text-align: center; padding-top:1rem;">
+            <li> Click the title for the GitHub link </li>
+
+            <li> Click the image for project description </li>
+        </ul>
+
+        <dialog id="alert-dialog" open>
+            <h2 id="alert-title" style="text-align:center; padding:1rem;">  </h2>
+            <p id="alert-paragraph"> </p>
+            <button id="alert-ok" type="button" onclick="alertOkBtn()" style="padding:1rem; margin-bottom: 1rem;"> OK </button>
+        </dialog>
+
+        <dialog id="paragraphs">
+            <p id="bof-paragraph">
+                Birds of a Feather is an android application. This app was made in a group of 6, including me.
+                The goal of the app was to help students find other students in their current class that they share classes with.
+                The app is easy to use. If it is your first time logging in, then you enter your information, such as name, profile picture,
+                and all your classes that you have either taken in the past or are currenlty taken. After the login step is completed, 
+                you can check to see if you share or did share other classes with your current classmates. To check this, simply tap on the
+                start icon, this will use bluetooth to connect with students within 30-40 feet, and will show the user the name of 
+                their fellow students if they share atleast one class together, and it will also show the user how many classes they share 
+                with their fellow students. The user can then click on one of the students they connected with to see more details about that
+                specific studnet. The user also has an option to wave to that student and that student can wave back to them.
+            </p>
+
+            <p id="os-paragraph">
+                In a team of two, including me, we built a Operating System simular to help us better understand how an Operating System 
+                functions. Implemented important functions of an operating system such as: timer interrupt, thread synchronization, and thread joining.
+                Developed a memory management system with demand paging for virtual and physical memory to support multiprogramming.
+                Created system calls for file management such as: open, create, read, write, close, unlink, execute. Overall, our Operating System
+                functioned as expected.
+            </p>
+
+            <p id="nn-paragraph">
+                The goal for this project was to build convolutional neural networks to classify images of food belonging to one of twenty different categories. 
+                The CNNs were built using convolution layers, max pooling, adaptive average pooling, fully connected layers, and regularization techniques such as drop out. 
+                More specifically, a convolutional neural network was trained to recognize pictures of food ranging from garlic bread to cheesecake and chocolate cake. 
+                The problem was that given pictures of similarly shaped/colored food (like cheesecake and chocolate cake) it can be hard to distinguish between the two categories.
+                Using a basic CNN architecture, our baseline CNN model was able to get an accuracy of around 45%. 
+                After improving the baseline model, our custom CNN model was able to get an accuracy of around 56%. 
+                Using transfer learning to train resnet18 and vgg16, we were able to get accuracies of around 80% and 79% respectively.
+            </p>
+
+            <p id="chess-paragraph">
+                Developed a multiplayer chess game in python. The main library that was used for this game was pygame. After using pygame
+                to build a few simple games I tried to make chess from scratch. Using the knowledge I built by working with pygame,
+                I was able to create a functioning chess game within a week or so. There are still some actual chess moves that cannot
+                be performed in this game such as the castle, however, overall the game mimics real life chess. This was a personal project.
+            </p>
+        </dialog>
+
         <section class="projects1 grid-container"> 
-            <div>
+            <div data-aos="flip-up">
                 <h2 id="bof"> <a href="https://github.com/AadharSharma7/cse110project-androidapp" target="_blank">BoF (Birds of a Feather) Android App </a> </h2>
-                <!-- <p> 
-                    Birds of a Feather is an android application. This app was made in a group of 6, including me.
-                    The goal of the app was to help students find other students in their current class that they share classes with.
-                    The app is easy to use. If it is your first time logging in, then you enter your information, such as name, profile picture,
-                    and all your classes that you have either taken in the past or are currenlty taken. After the login step is completed, 
-                    you can check to see if you share or did share other classes with your current classmates. To check this, simply tap on the
-                    start icon, this will use bluetooth to connect with students within 30-40 feet, and will show the user the name of 
-                    their fellow students if they share atleast one class together, and it will also show the user how many classes they share 
-                    with their fellow students. The user can then click on one of the students they connected with to see more details about that
-                    specific studnet. The user also has an option to wave to that student and that student can wave back to them.
-                </p> -->
-                <img src="imgs/android1.png" alt="android img" title="android img" width="400" height="400">
+                <img src="imgs/android1.png" id="android-img" alt="android img" title="android img" width="400" height="400">
             </div>
 
-            <div>
+            <div data-aos="flip-up">
                 <h2 id="nachos"> <a href="https://github.com/UCSD-CSE120-SP22/nachos_sp22_AadharSharma7_sohummodha" target="_blank"> Nachos Operating System Simulator </a> </h2>
-                <!-- <p> In a team of two, including me, we built a Operating System simular to help us better understand how an Operating System 
-                    functions. Implemented important functions of an operating system such as: timer interrupt, thread synchronization, and thread joining.
-                    Developed a memory management system with demand paging for virtual and physical memory to support multiprogramming.
-                    Created system calls for file management such as: open, create, read, write, close, unlink, execute. Overall, our Operating System
-                    functioned as expected.
-                </p> -->
-                <!-- <img src="imgs/os1.png" alt="os1 img" width="400" height="400"> -->
-                <img src="imgs/os2.jpeg" alt="os img" title="os img" width="400" height="400">
-                <!-- <img src="imgs/os3.png" alt="os3 img" width="400" height="400"> -->
+                <img src="imgs/os2.jpeg" id="os-img" alt="os img" title="os img" width="400" height="400">
             </div>
         </section>
 
         <section class="projects2 grid-container"> 
-            <div>
+            <div data-aos="flip-up">
                 <h2> <a href="https://github.com/cse151bwi22/cse151b-wi22-pa3-mmjiang-ucsd" target="_blank">Food Classifier Neural Network</a> </h2>
-                <!-- <p> 
-                    The goal for this project was to build convolutional neural networks to classify images of food belonging to one of twenty different categories. 
-                    The CNNs were built using convolution layers, max pooling, adaptive average pooling, fully connected layers, and regularization techniques such as drop out. 
-                    More specifically, a convolutional neural network was trained to recognize pictures of food ranging from garlic bread to cheesecake and chocolate cake. 
-                    The problem was that given pictures of similarly shaped/colored food (like cheesecake and chocolate cake) it can be hard to distinguish between the two categories.
-                    Using a basic CNN architecture, our baseline CNN model was able to get an accuracy of around 45%. 
-                    After improving the baseline model, our custom CNN model was able to get an accuracy of around 56%. 
-                    Using transfer learning to train resnet18 and vgg16, we were able to get accuracies of around 80% and 79% respectively.
-                </p> -->
-                <img src="imgs/nn.jpeg"  alt="food classifier img" title="food classifier img">
+                <img src="imgs/nn.jpeg" id="nn-img" alt="food classifier img" title="food classifier img">
             </div>
 
-            <div>
+            <div data-aos="flip-up">
                 <h2> <a href="https://github.com/AadharSharma7/ChessGame" target="_blank">Chess Game</a> </h2>
-                <!-- <p> 
-                    Developed a multiplayer chess game in python. The main library that was used for this game was pygame. After using pygame
-                    to build a few simple games I tried to make chess from scratch. Using the knowledge I built by working with pygame,
-                    I was able to create a functioning chess game within a week or so. There are still some actual chess moves that cannot
-                    be performed in this game such as the castle, however, overall the game mimics real life chess. This was a personal project. 
-                </p> -->
-                <img src="imgs/chess1.png" alt="chess img" title="chess img" width="400" height="400">
+                <img src="imgs/chess1.png" id="chess-img" alt="chess img" title="chess img" width="400" height="400">
             </div>
         </section>
 
-        <section class="future-plans"> 
+        <section data-aos="flip-up" class="future-plans"> 
             <h2> Future Projects Plans </h2>
             <p>
                 One plan for the future that I have is to extend the chess game that I made and add an AI to it. This way
@@ -106,5 +130,66 @@
             </a>
         </my-icons>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            // Global settings:
+            disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+            startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+            initClassName: 'aos-init', // class applied after initialization
+            animatedClassName: 'aos-animate', // class applied on animation
+            useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+            disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+            debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+            throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+            
+            // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+            offset: 420, // offset (in px) from the original trigger point
+            delay: 0, // values from 0 to 3000, with step 50ms
+            duration: 1500, // values from 0 to 3000, with step 50ms
+            easing: 'ease', // default easing for AOS animations
+            once: false, // whether animation should happen only once - while scrolling down
+            mirror: true, // whether elements should animate out while scrolling past them
+            anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+        });  
+    </script>
 </body>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        document.getElementById('alert-ok').addEventListener('click', () => {
+            document.getElementById('alert-dialog').style.display = 'none'; 
+        })
+
+        document.getElementById('android-img').addEventListener('click', () => {
+            document.getElementById('alert-dialog').style.display = 'block';
+            document.getElementById('alert-title').textContent = 'BoF Android App';
+            document.getElementById('alert-paragraph').textContent = document.getElementById('bof-paragraph').textContent;
+        })
+
+        document.getElementById('os-img').addEventListener('click', () => {
+            document.getElementById('alert-dialog').style.display = 'block';
+            document.getElementById('alert-title').textContent = 'Nachos Operating System Simulator';
+            document.getElementById('alert-paragraph').textContent = document.getElementById('os-paragraph').textContent;
+        })
+
+        document.getElementById('nn-img').addEventListener('click', () => {
+            document.getElementById('alert-dialog').style.display = 'block';
+            document.getElementById('alert-title').textContent = 'Food Classifier Neural Network';
+            document.getElementById('alert-paragraph').textContent = document.getElementById('nn-paragraph').textContent;
+        })
+
+        document.getElementById('chess-img').addEventListener('click', () => {
+            document.getElementById('alert-dialog').style.display = 'block';
+            document.getElementById('alert-title').textContent = 'Chess Game';
+            document.getElementById('alert-paragraph').textContent = document.getElementById('chess-paragraph').textContent;
+        })
+    });
+
+</script>
+
+
 </html>
