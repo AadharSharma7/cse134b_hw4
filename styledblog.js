@@ -109,6 +109,31 @@ function addDeleteListeners() {
         
             localStorage.setItem('posts', JSON.stringify(postsArr));
             postToDelete.remove();
+
+            document.querySelectorAll('.fa-pencil').forEach(btn => {
+                btn.addEventListener('mouseover', () => {
+                    btn.style.backgroundColor = '#a239ca';
+                });
+            });
+        
+            document.querySelectorAll('.fa-pencil').forEach(btn => {
+                btn.addEventListener('mouseout', () => {
+                    btn.style.backgroundColor = '#0e0b16';
+                });
+            });
+        
+            document.querySelectorAll('.fa-trash-can').forEach(btn => {
+                btn.addEventListener('mouseover', () => {
+                    btn.style.backgroundColor = '#a239ca';
+                });
+            });
+        
+            document.querySelectorAll('.fa-trash-can').forEach(btn => {
+                btn.addEventListener('mouseout', () => {
+                    btn.style.backgroundColor = '#0e0b16';
+                });
+            });
+            
             displayPosts();
         });
     });
